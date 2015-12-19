@@ -1,0 +1,25 @@
+size = 8
+turtle.down()
+turtle.down()
+turtle.select(1)
+nextRight = true
+for i=1,size do
+  for j=1,size do
+    turtle.placeUp()
+    turtle.forward()
+  end
+  if nextRight then
+    turtle.turnRight()
+    turtle.forward()
+    turtle.turnRight()
+  else
+    turtle.turnLeft()
+    turtle.forward()
+    turtle.turnLeft()
+  end
+  turtle.forward()
+  nextRight = not nextRight
+end
+turtle.up()
+turtle.up()
+
