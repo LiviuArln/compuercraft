@@ -8,18 +8,45 @@ for i=1,size do
     turtle.placeUp()
     turtle.forward()
   end
-  if nextRight then
-    turtle.turnRight()
-    turtle.forward()
-    turtle.turnRight()
-  else
-    turtle.turnLeft()
-    turtle.forward()
-    turtle.turnLeft()
-  end
+  turn(nextRight)
+  turtle.forward()
+  turn(nextRight)
   turtle.forward()
   nextRight = not nextRight
 end
 turtle.up()
 turtle.up()
 
+function moveY(up) 
+  if up then
+    turtle.up()
+  else
+    turtle.down()
+  end
+end
+
+function moveX(forward)
+  if forward then
+    turtle.forward()
+  else
+    turtle.back()
+  end
+end
+
+function upThenDown(up, depth, job)
+  for i=1,depth do
+    moveY(up)
+  end
+  job()
+  for i=1,depth do
+    moveY(not up)
+  end
+end
+
+function turn(right)
+  if right then
+    turtle.turnRight()
+  else
+    turtle.turnLeft()
+  end
+end
