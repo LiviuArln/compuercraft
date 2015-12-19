@@ -1,4 +1,7 @@
+local arg = { ... }
+
 size = 8
+
 turtle.down()
 turtle.down()
 turtle.select(1)
