@@ -1,0 +1,19 @@
+turtle.select(1)
+for i=1,10 do
+  turtle.place()
+  turtle.down()
+end
+turtle.place()
+turtle.turnRight()
+turtle.place()
+turtle.turnLeft()
+turtle.turnLeft()
+turtle.place()
+turtle.turnRight()
+turtle.back()
+turtle.select(2)
+for i=1,10 do
+  turtle.place()
+  turtle.up()
+end
+turtle.place()
